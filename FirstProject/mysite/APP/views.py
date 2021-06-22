@@ -6,7 +6,7 @@ from .models import Question
 
 # Create your views here.
 def index(request):
-    latest_questions = Question.objects.order_by('-pub_date')[:5]
+    latest_questions = Question.objects.order_by('-pub_date')[:50]
     context = {'latest_questions': latest_questions}
     return render(request, 'APP/index.html', context)
 
