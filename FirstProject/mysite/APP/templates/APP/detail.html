@@ -12,10 +12,12 @@
         <input type="radio" name="choice" id="choice{{forloop.counter}}" value="{{choice.id}}"/>
         <label for="choice{{forloop.counter}}">{{choice.choice_text}}</label><br>
     {% endfor %}
-    <input type="submit" value="vote"/>
+    <input type="submit" class = 'btn btn-success' value="Vote"/>
 
 
 </form>
+
+<a href="{% url 'APP:index' %}"> <-- Questions</a>
 
 
 {% endblock %}
